@@ -93,7 +93,7 @@ for (let i = 0; i <= vowel_str.length - 1; i++) {
     }
 }
 console.log("raceCar:", count)
-
+// Print the index of first occurrence of "a" in a string.
 
 
 
