@@ -96,5 +96,27 @@ for (let i = 1; i <= 4; i++) {
 
 
 
+// IA shred problems will be shared here...
+// Basic Level
+// 🧩 Problem 1: Print a square of *
+Input: n = 4
+for (let i = 1; i <= n; i++) {
+    let bag3 = "";
+    for (let j = 1; j <= n; j++) {
+        bag3 += "*" + " "
+    }
+    console.log(bag3)
+}
+// Problem 2: Right-angled triangle of numbers
+Input: N = 5;
+for (let i = 1; i <= N; i++) {
+   
+    for (let j = 1; j <= i; j++) {
+       
+    }
+    
+}
+
+
 
 
