@@ -110,13 +110,62 @@ for (let i = 1; i <= n; i++) {
 // Problem 2: Right-angled triangle of numbers
 Input: N = 5;
 for (let i = 1; i <= N; i++) {
-   
+    let pocket = "";
     for (let j = 1; j <= i; j++) {
-       
+        pocket += j
     }
-    
+    console.log(pocket)
+
+}
+//  Problem 3: Hollow rectangle pattern
+Input: rows = 4, cols = 5;
+for (let i = 1; i <= rows; i++) {
+    // console.log(i)
+    let line = "";
+    for (let j = 1; j <= cols; j++) {
+        if (i === 1 || i === rows || j === 1 || j === cols) {
+            line += "* ";
+        } else {
+            line += "  ";
+        }
+    }
+    console.log(line)
 }
 
+
+// & days nested loops Challenge.
+//  print a solid square ...
+let squareWithDimentions = 4;
+for (let i = 1; i <= squareWithDimentions; i++) {
+    let shape1 = "";
+    for (let j = 1; j <= squareWithDimentions; j++) {
+        shape1 += "* ";
+    }
+    console.log(shape1);
+}
+let rightAngleDim = 5;
+for (let i = 1; i <= rightAngleDim; i++) {
+    let shape2 = "";
+    for (let j = 1; j <= i; j++) {
+        shape2 += j + " ";
+    }
+    console.log(shape2)
+}
+// Print a continuous number triangle
+// Output:
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+Input: continiousNum = 4;
+for (let i = 1; i <= continiousNum; i++) {
+    let shape3 = "";
+    for (let j = 1; j <= i; j++) {
+        // shape3 += i + " ";
+        
+    }
+    // console.log(shape3)
+}
 
 
 
