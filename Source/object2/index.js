@@ -174,15 +174,132 @@ for (let i = 0; i <= input_array.length - 1; i++) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // IA covered problems will be done here.....
+// Problem 1.📦 Character Frequency with Case Sensitivity...
+let Input = "HarShHar"
+// Output: { H: 2, a: 2, r: 2, S: 1, h: 1 }
+let caseSencitiveFrequency = {};
+for (let i = 0; i < Input.length; i++) {
+    if (caseSencitiveFrequency[Input[i]] == undefined) {
+        caseSencitiveFrequency[Input[i]] = 1;
+    } else {
+        caseSencitiveFrequency[Input[i]]++;
+    }
+}
+console.log(caseSencitiveFrequency)
+
+
+// Problem 2.  Find elements with maximum frequency
+let Input2 = [3, 5, 3, 7, 5, 3, 9];
+Output: 3  // because 3 appears 3 times, most frequent;
+let objWithHeighestFrequency = {};
+for (let i = 0; i < Input2.length; i++) {
+    if (objWithHeighestFrequency[Input2[i]] == undefined) {
+        objWithHeighestFrequency[Input2[i]] = 1;
+
+    } else {
+        objWithHeighestFrequency[Input2[i]]++;
+    }
+}
+let maxFreq = -Infinity;
+let maxKey = null;
+
+for (let key in objWithHeighestFrequency) {
+    if (objWithHeighestFrequency[key] > maxFreq) {
+        maxFreq = objWithHeighestFrequency[key];
+        maxKey = key;
+    }
+}
+console.log("Key with highest frequency:", maxKey);
 
 
 
+// Problem3. Print name of employee(s) with highest salary
+let employees = [
+    { name: "Aman", salary: 25000 },
+    { name: "Riya", salary: 75000 },
+    { name: "Shyam", salary: 50000 },
+    { name: "Diya", salary: 75000 }
+]
+// Output: "Riya", "Diya" both have highest salary
+let maxSalary = -Infinity;
+let salaryArray = [];
+for (let i = 0; i < employees.length; i++) {
+    salaryArray.push(employees[i].salary);
+    for (let j = 0; j < salaryArray.length; j++) {
+        if (salaryArray[i] > maxSalary) {
+            maxSalary = salaryArray[i]
+        }
+    }
+}
+console.log(maxSalary)
 
 
+// Problem 4: Transform 3 parallel arrays into array of objects
+let goods = ["Pencil", "Pen", "Notebook"];
+let rupees = [5, 10, 50];
+let stock = [50, 100, 40];
+
+// Output:
+// [
+//     { name: "Pencil", price: 5, stock: 50 },
+//     { name: "Pen", price: 10, stock: 100 },
+//     { name: "Notebook", price: 50, stock: 40 }
+// ]
+let mergedArray = [];
+for (let i = 0; i < goods.length; i++) {
+
+    let mergedObj = {
+        name: goods[i],
+        price: price[i],
+        stock: stock[i]
+    }
+    mergedArray.push(mergedObj);
+}
+console.log(mergedArray)
 
 
+// Problem 5 (Advanced Thinking):
+//  Count frequency and print elements sorted by frequency
+let Input3 = [2, 3, 2, 4, 3, 2, 4, 4, 4];
+// Output:
+// 4 → 4 times
+// 2 → 3 times
+// 3 → 2 times
+let orderedObj = {};
+for (let i = 0; i < Input3.length; i++) {
+    if (orderedObj[Input3[i]] == undefined) {
+        orderedObj[Input3[i]] = 1;
+    } else {
+        orderedObj[Input3[i]]++
+    }
+}
+let maxAccuranceElement;
+for (let key in orderedObj) {
+    // if () {
 
+    console.log(key, "→", orderedObj[key], "times")
+    // }
+}
 
 
 
