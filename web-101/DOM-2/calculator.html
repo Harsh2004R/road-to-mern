@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Calculator</title>
+    <style>
+        /* Reset & Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Calculator Container */
+        .calculator {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 100%;
+            max-width: 360px;
+        }
+
+        /* Display */
+        .display {
+            background: #222;
+            color: #0f0;
+            font-size: 2rem;
+            padding: 20px;
+            text-align: right;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow-x: auto;
+        }
+
+        /* Button Grid */
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            background: #f3f3f3;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #ddd;
+        }
+
+        .btn.operator {
+            background: #ffb703;
+            color: #fff;
+        }
+
+        .btn.operator:hover {
+            background: #ffa500;
+        }
+
+        .btn.equal {
+            background: #38bdf8;
+            color: #fff;
+            grid-column: span 1;
+        }
+
+        .btn.equal:hover {
+            background: #0ea5e9;
+        }
+
+        .btn.clear {
+            background: #ef4444;
+            color: #fff;
+        }
+
+        .btn.clear:hover {
+            background: #dc2626;
+        }
+
+        /* Responsive font sizes */
+        @media (max-width: 400px) {
+            .btn {
+                padding: 16px;
+                font-size: 1rem;
+            }
+
+            .display {
+                font-size: 1.5rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator" id="calculator">
+        <!-- Display Screen -->
+        <div class="display" id="display">0</div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button class="btn clear" id="clear" onclick="clearDisplay()">C</button>
+            <button class="btn" id="delete">⌫</button>
+            <button class="btn operator" id="divide">÷</button>
+            <button class="btn operator" id="multiply">×</button>
+
+            <button class="btn number" id="7">7</button>
+            <button class="btn number" id="8">8</button>
+            <button class="btn number" id="9">9</button>
+            <button class="btn operator" id="subtract">−</button>
+
+            <button class="btn number" id="4">4</button>
+            <button class="btn number" id="5">5</button>
+            <button class="btn number" id="6">6</button>
+            <button class="btn operator" id="add">+</button>
+
+            <button class="btn number" id="1">1</button>
+            <button class="btn number" id="2">2</button>
+            <button class="btn number" id="3">3</button>
+            <button class="btn equal" id="equals">=</button>
+
+            <button class="btn number" id="0">0</button>
+            <button class="btn" id="decimal">.</button>
+        </div>
+    </div>
+
+</body>
+
+
+
+<script>
+    let currentInput = "";
+    let previousInput = "";
+    let operator = "";
+    const display = document.getElementById("display");
+
+    // Number Buttons
+    document.querySelectorAll(".btn.number").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            if (display.innerText === "0" || currentInput === "0") currentInput = "";
+            currentInput += btn.innerText;
+            display.innerText = currentInput;
+        });
+    });
+
+    // Decimal
+    document.getElementById("decimal").addEventListener("click", () => {
+        if (!currentInput.includes(".")) {
+            currentInput += ".";
+            display.innerText = currentInput;
+        }
+    });
+
+    // Operators
+    function setOperator(op) {
+        if (currentInput === "") return;
+        if (previousInput !== "") calculateResult();
+        operator = op;
+        previousInput = currentInput;
+        currentInput = "";
+    }
+
+    document.getElementById("add").addEventListener("click", () => setOperator("+"));
+    document.getElementById("subtract").addEventListener("click", () => setOperator("-"));
+    document.getElementById("multiply").addEventListener("click", () => setOperator("*"));
+    document.getElementById("divide").addEventListener("click", () => setOperator("/"));
+
+    // Clear
+    document.getElementById("clear").addEventListener("click", () => {
+        currentInput = "";
+        previousInput = "";
+        operator = "";
+        display.innerText = "0";
+    });
+
+    // Delete (Backspace)
+    document.getElementById("delete").addEventListener("click", () => {
+        currentInput = currentInput.slice(0, -1);
+        display.innerText = currentInput || "0";
+    });
+
+    // Equals
+    document.getElementById("equals").addEventListener("click", () => {
+        if (currentInput === "" || previousInput === "") return;
+        calculateResult();
+        operator = "";
+    });
+
+    function calculateResult() {
+        let result;
+        const prev = parseFloat(previousInput);
+        const current = parseFloat(currentInput);
+        if (isNaN(prev) || isNaN(current)) return;
+
+        switch (operator) {
+            case "+":
+                result = prev + current;
+                break;
+            case "-":
+                result = prev - current;
+                break;
+            case "*":
+                result = prev * current;
+                break;
+            case "/":
+                result = current === 0 ? "Error" : prev / current;
+                break;
+            default:
+                return;
+        }
+
+        currentInput = result.toString();
+        previousInput = "";
+        display.innerText = currentInput;
+    }
+</script>
+
+
+</html>

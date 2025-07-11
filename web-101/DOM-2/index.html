@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="keypad">1</button>
+    <button class="keypad">2</button>
+    <button class="keypad">3</button>
+    <button class="keypad">4</button>
+    <button class="keypad">5</button>
+    <button class="keypad">6</button>
+    <button class="keypad">7</button>
+    <button class="keypad">8</button>
+    <button class="keypad">9</button>
+    <button class="keypad">0</button>
+
+
+
+
+    <h1>This Heading 1 can change it's color via Java Script.</h1>
+    <h1>This Heading 2 can change it's color via Java Script.</h1>
+    <button id="btn">Change color</button>
+</body>
+<script>
+    let keypadBtn = document.getElementsByClassName("keypad");
+    for (let i = 0; i < keypadBtn.length; i++) {
+        let btn = keypadBtn[i];
+        btn.addEventListener("click", (e) => [
+            console.log(e.target.innerText)
+        ])
+    }
+
+
+    // Styling HTML elements using java script...
+
+    let heading = document.getElementsByTagName("h1");
+    const button = document.getElementById("btn");
+    button.addEventListener("click", () => {
+        for (let j = 0; j < heading.length; j++) {
+            heading[j].style.color = "green";
+        }
+    })
+
+
+
+
+
+</script>
+
+</html>
