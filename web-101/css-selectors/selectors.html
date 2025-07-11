@@ -1,0 +1,103 @@
+<!-- What Are CSS Selectors?
+CSS Selectors are patterns used to select the HTML elements you want to style.
+When we write CSS, we tell the browser:
+“Hey, find this element on the page and apply these styles to it!” -->
+
+
+<!-- Basic Structure of CSS (in <style> tag) -->
+<!-- <style>
+    selector {                it can be h1,p,img any html tag
+        property: value;
+    }
+</style> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Types of selectors */
+        /* 1. Element Selector */
+        /* Here: p selects all <p> elements and makes their text blue. */
+        p {
+            color: blue;
+        }
+
+
+
+        /*  2. ID Selector (#id) */
+        #main-title {
+            color: red;
+            font-size: 24px;
+        }
+
+
+
+
+        /* 3. Class Selector (.class) */
+        .highlight {
+            background-color: yellow;
+        }
+
+
+
+
+
+        /* Universal Selector (*) */
+        * {
+            font-family: Arial;
+        }
+
+
+
+
+        /* Group Selector (,) */
+        h3,
+        h4 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+
+
+
+
+
+    <h1 id="main-title">This is a heading with an ID</h1>
+
+
+
+
+
+    <p class="highlight">This paragraph is highlighted.</p>
+    <div class="highlight">This div is also highlighted.</div>
+
+
+
+
+
+
+    <h3>This is heading using h3</h3>
+    <h4>This is paragraph using h4</h4>
+
+
+
+</body>
+
+</html>
+
+
+<!-- A Few More Useful Ones (As You Get Comfortable)
+Selector                     Meaning                                 Example
+element1 >                  element2 Selects direct child            div > p
+element1 + element2         Selects next sibling                     h1 + p
+[attribute]                  Selects elements with attribute         input[type="text"]
+element:hover                When hovered                            a:hover   -->
