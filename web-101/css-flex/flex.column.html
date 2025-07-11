@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* ========================= */
+        /* 🎯 FLEXBOX + SELECTORS 🔧 */
+        /* ========================= */
+
+        /* 1. Element Selector */
+        /* Apply flex to a div with class 'flex-container' */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* space between items */
+            align-items: center;
+            /* center items vertically */
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        /* 2. Class Selector */
+        /* All boxes inside container share this style */
+        .box {
+            background-color: lightcoral;
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            /* Make them all grow equally */
+            margin: 5px;
+        }
+
+        /* 3. Descendant Selector */
+        /* Target only <p> inside .box */
+        .box p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* 4. nth-child() pseudo-class */
+        /* Style each box differently based on order */
+        .box:nth-child(1) {
+            background-color: tomato;
+        }
+
+        .box:nth-child(2) {
+            background-color: seagreen;
+        }
+
+        .box:nth-child(3) {
+            background-color: royalblue;
+        }
+
+        /* 5. Hover (pseudo-class) */
+        .box:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Flexbox with Selectors & Combinators</h2>
+
+    <!-- Flex container (class selector) -->
+    <div class="flex-container">
+        <!-- Flex items (element/class selectors) -->
+        <div class="box">
+            <h3>Box 1</h3>
+            <p>This is the first box.</p>
+        </div>
+        <div class="box">
+            <h3>Box 2</h3>
+            <p>This is the second box.</p>
+        </div>
+        <div class="box">
+            <h3>Box 3</h3>
+            <p>This is the third box.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
