@@ -1,0 +1,61 @@
+<!-- In this page we will look some css and box model -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model CSS</title>
+</head>
+
+<body>
+
+    <!-- Heading with padding and margin -->
+    <h1 style="background-color: lightblue; padding: 20px; margin: 30px; border: 2px solid navy">
+        Welcome to CSS Box Model!
+    </h1>
+
+    <!-- Paragraph with box model styling -->
+    <p style="background-color: lightyellow; padding: 15px; margin: 25px; border: 2px dashed orange;">
+        This is a paragraph with padding, margin, and border applied. Notice how space is added inside and outside.
+    </p>
+
+    <!-- Link styled with box model -->
+    <a href="https://google.com" target="_blank"
+        style="display: inline-block; background-color: lightgreen; padding: 10px; margin: 20px; border: 1px solid green; text-decoration: none; color: black;">
+        Visit Google
+    </a>
+
+    <!-- Image inside a styled div -->
+    <div style="background-color: lightgray; padding: 20px; margin: 40px; border: 3px solid black;">
+        <p style="margin: 0 0 10px 0;">Here is an image inside a box:</p>
+        <img src="https://via.placeholder.com/150" alt="Placeholder"
+            style="border: 2px solid red; padding: 5px; margin: 10px;">
+    </div>
+
+    <!-- Table with box model -->
+    <table style="border: 2px solid black; margin: 30px; padding: 10px;">
+        <tr>
+            <th style="border: 1px solid gray; padding: 10px;">Name</th>
+            <th style="border: 1px solid gray; padding: 10px;">Age</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 10px;">Harsh</td>
+            <td style="border: 1px solid gray; padding: 10px;">21</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid gray; padding: 10px;">Sharma</td>
+            <td style="border: 1px solid gray; padding: 10px;">22</td>
+        </tr>
+    </table>
+
+    <!-- Bonus: Span styled inside paragraph -->
+    <p style="padding: 10px; border: 1px dotted gray; margin: 20px;">
+        This is a sentence with a <span style="background-color: pink; padding: 5px; border: 1px solid red;">colored
+            word</span> using inline CSS.
+    </p>
+
+</body>
+
+</html>
