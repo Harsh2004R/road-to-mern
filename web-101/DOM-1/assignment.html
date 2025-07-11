@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input and select values</title>
+</head>
+
+<body>
+    <H1>Input and select values taking page...</H1>
+    <p id="para">Type your input values here...</p>
+    <br>
+    <label>Name</label>
+    <br>
+    <input type="text" name="Name" placeholder="Enter your input" id="input">
+    <label>Gender</label>
+    <br>
+    <select id="select">
+        <option value="Male">
+            Male
+        </option>
+        <option value="female">
+            Female
+        </option>
+    </select>
+    <button onclick="captureDetails()">Apply</button>
+</body>
+
+<script>
+    let paragraph = document.getElementById("para");
+    let selectEl = document.getElementById("select");
+    let inputEl = document.getElementById("input");
+
+    const captureDetails = () => {
+        paragraph.textContent = "Input value is " + inputEl.value + " Select value is " + selectEl.value;
+    }
+</script>
+
+</html>

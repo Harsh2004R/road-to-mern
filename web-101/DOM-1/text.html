@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">
+        I am before click...
+    </h1>
+    <button id="btn" onclick="chnageText()">Button</button>
+</body>
+
+<script>
+
+    let myBtn = document.getElementById("btn");
+    let heading = document.getElementById("heading")
+    console.log(heading)
+    function chnageText() {
+        heading.innerText = "I am after click"
+    }
+
+    
+
+</script>
+
+</html>
