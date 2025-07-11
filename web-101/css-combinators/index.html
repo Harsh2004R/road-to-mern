@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* ======================= */
+        /* ✅ CSS COMBINATORS ✅ */
+        /* ======================= */
+
+        /* 1. Descendant Selector (space) */
+        /* Selects all <p> inside <div>, even deeply nested */
+        div p {
+            color: purple;
+        }
+
+
+        /* 2. Child Selector (>) */
+        /* Selects only direct child <li> inside <ul> */
+        ul>li {
+            background-color: lightblue;
+        }
+
+
+        /* 3. Adjacent Sibling Selector (+) */
+        /* Selects the <p> that comes IMMEDIATELY after an <h2> */
+        h2+p {
+            color: darkorange;
+            font-style: italic;
+        }
+
+
+        /* 4. General Sibling Selector (~) */
+        /* Selects all <p> siblings after an <h3>, not just the first */
+        h3~p {
+            color: teal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. Descendant Selector Example -->
+    <div>
+        <p>This paragraph is inside a div (Descendant)</p>
+        <section>
+            <p>Even nested paragraph inside section inside div</p>
+        </section>
+    </div>
+    <p>This paragraph is NOT inside a div</p>
+
+    <hr>
+
+    <!-- 2. Child Selector Example -->
+    <ul>
+        <li>Apple</li> <!-- styled -->
+        <li>Banana</li> <!-- styled -->
+        <div>
+            <li>Not styled because it's not a direct child</li>
+        </div>
+    </ul>
+
+    <hr>
+
+    <!-- 3. Adjacent Sibling Selector Example -->
+    <h2>This is an h2 heading</h2>
+    <p>This paragraph comes immediately after h2</p> <!-- styled -->
+    <div>
+        <p>This paragraph is inside a div, not adjacent to h2</p>
+    </div>
+
+    <hr>
+
+    <!-- 4. General Sibling Selector Example -->
+    <h3>This is an h3 heading</h3>
+    <p>This is a sibling after h3</p> <!-- styled -->
+    <p>Another sibling after h3</p> <!-- styled -->
+
+</body>
+
+</html>
+
+<!-- 
+Selector	                Meaning	                                        Example
+A B	                        All B inside A (any depth)	                    div p
+A > B	                    Only B that are direct children of A	        ul > li
+A + B	                    The B that comes immediately after A	        h2 + p
+A ~ B	                    All B siblings that come after A	            h3 ~ p -->
