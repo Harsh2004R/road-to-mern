@@ -1,0 +1,62 @@
+<!-- Save this file as grid-columns.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid by Columns</title>
+    <style>
+        /* Parent grid container */
+        .grid-container {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            /* 3 equal rows */
+            grid-auto-flow: column;
+            /* Arrange items by columns */
+            gap: 10px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            height: 400px;
+        }
+
+        /* Grid items */
+        .grid-item {
+            background-color: darkorange;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 30px 0;
+            border-radius: 8px;
+        }
+
+        /* Style even items */
+        .grid-item:nth-child(even) {
+            background-color: mediumseagreen;
+        }
+
+        /* Hover effect */
+        .grid-item:hover {
+            background-color: navy;
+            transform: scale(1.05);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Grid by Columns</h2>
+
+    <div class="grid-container">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">D</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">F</div>
+    </div>
+
+</body>
+
+</html>

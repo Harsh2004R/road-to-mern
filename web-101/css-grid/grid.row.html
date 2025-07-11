@@ -1,0 +1,59 @@
+<!-- Save this file as grid-rows.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid by Rows</title>
+    <style>
+        /* Parent grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 equal columns */
+            gap: 10px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Grid items (class selector) */
+        .grid-item {
+            background-color: steelblue;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 30px 0;
+            border-radius: 8px;
+        }
+
+        /* nth-child styling */
+        .grid-item:nth-child(odd) {
+            background-color: darkcyan;
+        }
+
+        /* Hover effect */
+        .grid-item:hover {
+            background-color: crimson;
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Grid by Rows</h2>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+</body>
+
+</html>
