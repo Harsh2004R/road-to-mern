@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - 3</title>
+</head>
+
+
+
+<body>
+    <div id="container"></div>
+</body>
+
+<script>
+    let cont = document.getElementById('container');
+    const array = [
+        "I am Heading 1",
+        "I am Heading 2",
+        "I am Heading 3",
+        "I am Heading 4",
+        "I am Heading 5",
+    ]
+
+    array.forEach(element => {
+        let heading = document.createElement("H1")
+        heading.innerText = element;
+        heading.style.color = "coral"
+        cont.append(heading);
+    });
+
+
+
+
+
+
+</script>
+
+</html>
