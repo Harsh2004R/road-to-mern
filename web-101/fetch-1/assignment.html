@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch assignment</title>
+</head>
+
+<body>
+    <!-- <div id="cont">
+        <div id="product">
+
+            <img id="pro-img"></img>
+            <p id="description"></p>
+            <p id="price"></p>
+        </div>
+    </div> -->
+</body>
+<script>
+
+
+    fetch("https://fakestoreapi.com/products").then((res) => {
+        let products = res.json();
+        return products;
+    }).then((pro) => {
+        console.log(pro)
+        displayDom(pro);
+    }).catch((err) => {
+        console.log(err)
+    })
+    function displayDom(data) {
+        data.forEach(element => {
+            let cont = document.createElement("div");
+            let product = document.createElement("div");
+            let img = document.createElement("img");
+            img.setAttribute("src", element.image);
+            let title = document.createElement("h3");
+            title.innerText = element.title;
+            let price = document.createElement("h5");
+            price.innerText = element.price;
+            let desc = document.createElement("p");
+            desc.innerText = element.description;
+
+
+
+
+            product.append(img)
+            cont.append(product);
+            // document.body.appendChild(cont);
+        });
+    }
+
+</script>
+
+</html>
