@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revision-work</title>
+</head>
+
+<body>
+    <select id="selection">
+        <option value="select">Select an option</option>
+        <option value="Heading-1">Heading-1</option>
+        <option value="Heading-2">Heading-2</option>
+        <option value="Heading-3">Heading-3</option>
+    </select>
+
+    <div id="cont"></div>
+</body>
+
+<script>
+    const array = [
+        "Heading-1",
+        "Heading-2",
+        "Heading-3"
+    ]
+    let cont = document.getElementById("cont");
+    array.forEach((el) => {
+        let heading = document.createElement("h1");
+        heading.innerText = el;
+        cont.append(heading);
+    })
+    let selectEl = document.getElementById("selection");
+    selectEl.addEventListener("change", () => {
+        targetOptn = selectEl.value;
+        let filteredArr = array.filter((el) => {
+            if (el === targetOptn) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+        // console.log(filteredArr)
+        cont.innerHTML = null;
+        filteredArr.forEach((el) => {
+            let heading = document.createElement("h1");
+            heading.innerText = el;
+            cont.append(heading);
+        })
+    })
+
+</script>
+
+</html>
