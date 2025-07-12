@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage...</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">
+        Counter
+    </h1>
+    <h1 id="counter" style="text-align: center;">
+        0
+    </h1>
+    <button id="btn" style="margin-left: 49%; text-align: center;">
+        inc
+    </button>
+
+</body>
+
+<script>
+    let btn = document.getElementById("btn");
+    let heading = document.getElementById("counter");
+    let counter = localStorage.getItem("val");
+    if (counter == null) {
+        counter = 0;
+    }
+    heading.innerText = counter;
+
+    btn.addEventListener("click", () => {
+        counter++;
+        heading.innerText = counter;
+        localStorage.setItem("val", counter);
+    })
+</script>
+
+</html>
