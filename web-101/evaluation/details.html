@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+        }
+
+        .box {
+            border: 2px solid tomato;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Details</h1>
+    <div class="box" id="detailBox"></div>
+
+    <script>
+        let detailBox = document.getElementById("detailBox");
+
+        // TODO: Get selected user info from localStorage and display here
+        const user = JSON.parse(localStorage.getItem("target-user"));
+        console.log(user)
+        for (let key in user) {
+            let UserName = document.createElement("h1");
+            UserName.innerText = user[key];
+            detailBox.append(UserName,)
+        }
+
+    </script>
+</body>
+
+</html>

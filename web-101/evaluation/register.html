@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register Course</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+        }
+
+        input,
+        button {
+            margin: 0.5rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Register for a Course</h1>
+    <input type="text" id="name" placeholder="Enter your name" />
+    <input type="text" id="course" placeholder="Enter course name" />
+    <button id="registerBtn">Register</button>
+
+    <script>
+        let nameInput = document.getElementById("name");
+        let courseInput = document.getElementById("course");
+        let registerBtn = document.getElementById("registerBtn");
+        // TODO: Add logic to store name and course in localStorage
+        registerBtn.addEventListener("click", () => {
+            let myFormData =
+            {
+                name: nameInput.value,
+                course: courseInput.value,
+            }
+            let User = JSON.parse(localStorage.getItem("user"));
+            if (User == null) {
+                User = [];
+            }
+            User.push(myFormData);
+            localStorage.setItem("user", JSON.stringify(User));
+            // console.log(User);
+        })
+
+
+
+    </script>
+</body>
+
+</html>

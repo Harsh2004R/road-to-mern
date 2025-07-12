@@ -1,0 +1,30 @@
+🔥 Problem: "Simple Course Registration App" (Multi-page)
+💡 Scenario:
+Page 1 (register.html): User fills out a form with their name and a course name.
+
+Page 2 (courses.html): Displays the list of registered users and their selected courses (fetched from localStorage).
+
+Page 3 (details.html): When a user is clicked, shows their detailed info (name + course) based on localStorage.
+
+You’ll manage saving/fetching data via localStorage across pages.
+
+✅ Folder Structure:
+cpp
+Copy
+Edit
+project/
+├── register.html
+├── courses.html
+├── details.html
+└── app.js (Optional: or use inline scripts per file)
+
+
+
+Your Tasks (Logic Side):
+ Use localStorage to share data across pages.
+
+ In register.html, store each registration as an object in an array in localStorage.
+
+ In courses.html, read the array and list all users. Clicking one stores their data and redirects to details.html.
+
+ In details.html, fetch and display the clicked user's info.

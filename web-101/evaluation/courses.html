@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registered Courses</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+
+    .user {
+      cursor: pointer;
+      margin: 1rem 0;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Registered Students</h1>
+  <div id="courseList"></div>
+
+  <script>
+    let courseList = document.getElementById("courseList");
+    // TODO: Fetch data from localStorage and display users in this div
+    // On click of a user, save selected user info to localStorage and navigate to details.html
+    let userData = JSON.parse(localStorage.getItem("user"));
+    userData.forEach(element => {
+      let card = document.createElement("div");
+      card.style.padding = "10px";
+      card.style.border = "3px solid #000"
+      let Name = document.createElement("h2");
+      Name.innerText = element.name;
+      let Course = document.createElement("p");
+      Course.innerText = element.course;
+      card.append(Name, Course)
+      courseList.append(card);
+
+
+      card.addEventListener("click", () => {
+        localStorage.setItem("target-user", JSON.stringify(element));
+        window.location.href = "./details.html"
+      })
+      console.log(element)
+    });
+  </script>
+</body>
+
+</html>
