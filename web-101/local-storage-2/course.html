@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+</head>
+
+<body>
+    <div>
+        Your Courses...
+    </div>
+    <div id="card-container"></div>
+</body>
+
+<script>
+    let container = document.getElementById("card-container");
+    let myData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    myData.forEach(el => {
+        let card = document.createElement("div");
+        card.style.border = "1px solid black";
+        card.style.padding = "10px";
+        card.style.margin = "10px";
+        card.style.width = "250px";
+
+        let title = document.createElement("h2");
+        title.innerText = el.title;
+
+        let description = document.createElement("h3");
+        description.innerText = el.description;
+
+        let price = document.createElement("p");
+        price.innerText = `₹${el.price}`;
+
+        card.append(title, description, price);
+        container.appendChild(card);
+    });
+</script>
+
+</html>

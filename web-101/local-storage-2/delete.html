@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+
+<body>
+    <div id="cont">
+        <!-- I want this structure in my page using java script -->
+
+
+        <!-- <div>
+            <h2>
+                <button>Delete</button>
+            </h2>
+        </div> -->
+    </div>
+
+</body>
+<script>
+    let array = ["Heading-1", "Heading-2", "Heading-3"];
+    let cont = document.getElementById("cont");
+    function renderDom(array) {
+        cont.innerHTML = "";
+        array.forEach((element, index) => {
+            let div = document.createElement("div");
+            let h2 = document.createElement("h2");
+            let btn = document.createElement("button");
+            h2.innerText = element;
+            btn.innerText = `delete`;
+
+            btn.addEventListener("click", () => {
+                let filteredArray = array.filter((el, i) => i !== index);
+                renderDom(filteredArray);
+            })
+            div.append(h2, btn);
+            cont.append(div);
+
+
+        })
+
+
+
+        console.log("dom should update with new values...")
+    }
+    renderDom(array);
+
+
+
+</script>
+
+</html>

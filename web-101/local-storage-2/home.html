@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <a href="./home.html">Home</a>
+    <a href="./course.html"> Course</a>
+
+    <div id="container">
+
+    </div>
+</body>
+
+<script>
+    const AllData = [
+        {
+            title: "MERN",
+            description: "full-stack-course",
+            price: 250000,
+        },
+        {
+            title: "NEM",
+            description: "node-express-mongo",
+            price: 220000,
+        },
+        {
+            title: "DA",
+            description: "data-analytics",
+            price: 200000,
+        },
+        {
+            title: "DSA",
+            description: "data-structure-and-algorithym",
+            price: 60000,
+        },
+    ]
+
+    let container = document.getElementById("container");
+
+
+    AllData.forEach((el, i) => {
+        let title = document.createElement("h3");
+        let description = document.createElement("p");
+        let price = document.createElement("p")
+        let btn = document.createElement("button");
+        title.innerText = el.title;
+        description.innerText = el.description;
+        price.innerText = el.price;
+        btn.innerText = "Add to Cart"
+        container.append(title, description, price, btn)
+        container.style.border = "5px solid #000"
+        container.style.display = "flex"
+        container.style.justifyContent = "space-between"
+        container.style.minHeight = "80vh"
+        btn.style.height = "35px"
+
+        btn.addEventListener("click", () => {
+            let LSdata = JSON.parse(localStorage.getItem("cart"))
+            if (LSdata == null) {
+                LSdata = [];
+            } LSdata.push(el);
+            localStorage.setItem("cart", JSON.stringify(LSdata));
+            console.log(LSdata);
+        })
+    })
+</script>
+
+</html>
