@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self checking Otp</title>
+</head>
+
+<body>
+    <input type="number" placeholder="enter otp with in 6s" name="num" id="otp">
+
+</body>
+<script>
+    let input = document.getElementById("otp");
+    const OTP = 9999;
+    let checkOtp = new Promise(function (res, rej) {
+        setTimeout(() => {
+            if (input.value == OTP) {
+                res("Otp is matched 😀");
+            } else {
+                rej("Otp is incorrect 😪");
+            }
+        }, 6000)
+    })
+
+    checkOtp.then(function (res) {
+        alert(res)
+    })
+    checkOtp.catch(function (err) {
+        alert(err);
+    })
+</script>
+
+</html>

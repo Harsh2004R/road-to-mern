@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+
+</body>
+
+
+<script>
+    let my_promis = new Promise((resolve, reject) => {
+        resolve("Your promis is resolved");
+    })
+    my_promis.then((res) => {
+        console.log(res);
+    })
+        .catch((err) => {
+            console.log(err)
+        })
+</script>
+
+</html>
