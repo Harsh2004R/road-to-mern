@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Stopwatch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f4f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .time-display {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .buttons button {
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #startBtn {
+            background: #4caf50;
+            color: white;
+        }
+
+        #pauseBtn {
+            background: #fbbc04;
+            color: white;
+        }
+
+        #resetBtn {
+            background: #f44336;
+            color: white;
+        }
+
+        .buttons button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="time-display" id="timeDisplay">
+            <span id="hours">00</span> :
+            <span id="minutes">00</span> :
+            <span id="seconds">00</span>
+        </div>
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        // JS logic to be added by you
+        // IDs available: hours, minutes, seconds, startBtn, pauseBtn, resetBtn
+        let startBtn = document.getElementById("startBtn");
+        let pauseBtn = document.getElementById("pauseBtn");
+        let resetBtn = document.getElementById("resetBtn");
+
+        let hourDisplay = document.getElementById("hours");
+        let minuteDisplay = document.getElementById("minutes");
+        let secondDisplay = document.getElementById("seconds");
+
+        let intervalId = null; // For storing setInterval reference
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+        // Start Button Logic
+        startBtn.addEventListener("click", () => {
+            if (intervalId !== null) return; // Prevent multiple intervals
+
+            intervalId = setInterval(() => {
+                seconds++;
+
+                if (seconds === 60) {
+                    minutes++;
+                    seconds = 0;
+                }
+
+                if (minutes === 60) {
+                    hours++;
+                    minutes = 0;
+                }
+
+                if (hours === 24) {
+                    hours = 0;
+                }
+
+                // Pad numbers like 09 instead of 9
+                secondDisplay.innerText = String(seconds).padStart(2, '0');
+                minuteDisplay.innerText = String(minutes).padStart(2, '0');
+                hourDisplay.innerText = String(hours).padStart(2, '0');
+
+            }, 1000);
+        });
+
+
+        // Pause Button Logic
+        pauseBtn.addEventListener("click", () => {
+            clearInterval(intervalId);
+            intervalId = null;
+        });
+
+        // Reset Button Logic
+        resetBtn.addEventListener("click", () => {
+            clearInterval(intervalId);
+            intervalId = null;
+
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+
+            secondDisplay.innerText = "00";
+            minuteDisplay.innerText = "00";
+            hourDisplay.innerText = "00";
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
