@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Info</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #eee;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .user-form {
+      width: 300px;
+      margin: auto;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    #save-user {
+      width: 100%;
+      background: teal;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    #user-details {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👤 User Info</h1>
+
+  <div class="user-form">
+    <input id="user-name" placeholder="Enter your name" />
+    <input id="user-email" placeholder="Enter your email" />
+    <button id="save-user">Save</button>
+
+    <div id="user-details"></div>
+  </div>
+
+  <script src="./js/user.js"></script>
+</body>
+</html>
