@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch - 2</title>
+    <style>
+        #main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        #main div {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            width: 150px;
+        }
+
+        #main img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="select"></select>
+    <div id="main">Loading...</div>
+
+    <script>
+        const main = document.getElementById("main");
+        const select = document.getElementById("select");
+        let globalData = [];
+
+
+        function fetchCountryData() {
+            fetch("https://restcountries.com/v3.1/all?fields=name,flags")
+                .then((response) => response.json())
+                .then((data) => {
+                    globalData = data.map((el) => ({
+                        name: el.name.common,
+                        flags: el.flags.png,
+                    }));
+                    domElements(globalData);
+                    selectOptions(globalData);
+
+                })
+                .catch((err) => {
+                    main.innerHTML = "Something went wrong.";
+                    console.error(err);
+                });
+        }
+
+        function domElements(countryData) {
+            main.innerHTML = "";
+            countryData.forEach((element) => {
+                const card = document.createElement("div");
+                const flag = document.createElement("img");
+                flag.setAttribute("src", element.flags);
+                const name = document.createElement("h2");
+                name.innerText = element.name;
+                card.append(flag, name);
+                main.append(card);
+            });
+        }
+
+        function selectOptions(countryData) {
+            countryData.forEach((element) => {
+                let optn = element.name;
+                let option = document.createElement("option");
+                option.setAttribute("value", element.name)
+                option.innerText = element.name;
+                select.appendChild(option);
+            });
+        }
+        select.addEventListener("change", function () {
+            const selectedVal = this.value;
+            // console.log(selectedVal)
+            if (selectedVal === "") {
+                domElements(globalCountries);
+            } else {
+                filterData(selectedVal);
+            }
+        })
+        const filterData = (val) => {
+            const res = globalData.filter((el) => el.name === val);
+            domElements(res);
+        }
+
+
+        fetchCountryData();
+    </script>
+</body>
+
+</html>
