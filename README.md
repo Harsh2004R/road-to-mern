@@ -45,7 +45,15 @@ This unit covers the foundational concepts of JavaScript including:
 
 1. `Local Storage Basics`  
 2. `Local Storage Project`  
-   - Includes: Keyboard, Calculator-type mini projects
+   - Includes: Keyboard, Calculator, Cart-type mini projects
+
+### 🔹 Inbuilt Java script stuff
+
+1. `Pomises`
+2. `Fetch`
+3. `async await`
+4. `trycatch`
+
 
 ---
 
