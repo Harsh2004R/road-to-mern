@@ -189,7 +189,7 @@ function iphone1(object, model, color, screen_size) {
     obj.model = model;
     obj.color = color;
     obj.screen_size = screen_size;
-    Object.setPrototypeOf(obj, iphone1AdditionalFeatures);
+    Object.setPrototypeOf(obj, iphone1.prototype);
 
     return obj;
 
@@ -205,19 +205,19 @@ let i5 = iphone1({}, "iphone1", "black", 4.2);
 iphone2.prototype.blutooth = function () {
     return `connecting...`
 }
-Object.setPrototypeOf(iphone2AdditionalFeatures, iphone1AdditionalFeatures);
+Object.setPrototypeOf(iphone2.prototype, iphone1.prototype);
 function iphone2(model, color, screen_size, frontCamera) {
     let obj = {};
     iphone1(obj, model, color, screen_size)
     obj.frontCamera = frontCamera;
-    Object.setPrototypeOf(obj, iphone2AdditionalFeatures);
+    Object.setPrototypeOf(obj, iphone2.prototype);
 
     return obj;
 
 }
 
 let i6 = iphone2("iphone1", "black", 4.2, true);
-console.log(i6.dial(), i6.blutooth(),i6.color,i6.model,i6.frontCamera)
+console.log(i6.dial(), i6.blutooth(), i6.color, i6.model, i6.frontCamera)
 
 
 
