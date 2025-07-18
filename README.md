@@ -23,7 +23,7 @@ This unit covers the foundational concepts of JavaScript including:
 
 ---
 
-### ✅ Unit 2 - Web 101 (HTML, CSS, DOM, Storage)
+### ✅ Unit 2 - Web-101 (HTML, CSS, DOM, Storage)
 
 #### 🔹 HTML & CSS Basics
 
@@ -57,11 +57,45 @@ This unit covers the foundational concepts of JavaScript including:
 
 ---
 
+
+
+### ✅ Unit 3 -JS-201 (Essential Javascript Concepts, Array methods in depth, Prototypical Inheritance, Asynchronous Javascript )
+
+
+#### 🔹Sprint-1
+
+1. `Essential Javascript Concepts - I`  
+2. ` Essential Javascript Concepts - II`  
+3. `Array methods in depth`  
+4. `Object Creation`  
+
+#### 🔹 Sprint-2
+
+1. `Prototypical Inheritance - Factory functions`  
+2. `Prototypical Inheritance - Constructor functions`  
+3. `Prototypical Inheritance - ES6 Classes`
+4. `Mastering the this keyword`
+
+#### 🔹 Sprint-3
+
+1. `Asynchronous Javascript & DOM - I`  
+2. ` Asynchronous Javascript & DOM  -II`
+3.  `Asynchronous Javascript & DOM  - III`
+4.  ` Testing Javascript`
+
+### 🔹 Revision Sprint
+
+ 1.  `revision of dom,basic js and advance java script  (ES6+, Closures, Async, Promises)`
+
+
+---
+
+
+
 ## 🛠️ Upcoming Units
 
 Stay tuned for upcoming units as we progress further:
 
-- ✅ Advanced JavaScript (ES6+, Closures, Async, Promises)
 - ✅ Git & GitHub
 - ✅ API Integration
 - ✅ React.js
