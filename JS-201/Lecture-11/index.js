@@ -1,98 +1,100 @@
+// https://www.notion.so/vivmagarwal/Commonly-asked-interview-Questions-8ddfa4b600d341298a0222e45648db09
+
 // // Curring function....
 // // Example of curring function...
-// function a() {
-//     return function b() {
-//         return function c() {
-//             return `hello friends... from curring function`;
-//         }
-//     }
+function a() {
+    return function b() {
+        return function c() {
+            return `hello friends... from curring function`;
+        }
+    }
+}
+let ans = a()()()
+console.log(ans) // Output : hello friends... from curring function
+
+
+function A() {
+    let a = "Hello";
+    return function B() {
+        let b = "from";
+        return function C() {
+            let c = "chunnu"
+            return `${a} ${b} ${c}`
+        }
+    }
+}
+console.log(A()()()) // Hello from chunnu
+
+
+// Convert this function into curing function...
+// function a(A, B, C) {
+//     return A + B + C;
 // }
-// let ans = a()()()
-// console.log(ans) // Output : hello friends... from curring function
+// a(2, 3, 4)
+function sum(a) {
+    return function B(b) {
+        return function C(c) {
+            return a + b + c;
+        }
+    }
+}
+console.log(sum(2)(3)(4))
 
-
-// function A() {
-//     let a = "Hello";
-//     return function B() {
-//         let b = "from";
-//         return function C() {
-//             let c = "chunnu"
-//             return `${a} ${b} ${c}`
-//         }
-//     }
-// }
-// console.log(A()()()) // Hello from chunnu
-
-
-// // Convert this function into curing function...
-// // function a(A, B, C) {
-// //     return A + B + C;
-// // }
-// // a(2, 3, 4)
-// function sum(a) {
-//     return function B(b) {
-//         return function C(c) {
+// Defining currying using arrow functions...
+// let sumX = (a) => {
+//     return (b) => {
+//         return (c) => {
 //             return a + b + c;
 //         }
 //     }
 // }
-// console.log(sum(2)(3)(4))
-
-// // Defining currying using arrow functions...
-// // let sumX = (a) => {
-// //     return (b) => {
-// //         return (c) => {
-// //             return a + b + c;
-// //         }
-// //     }
-// // }
-// let sumX = (A) => (B) => (C) => A + B + C
-// console.log(sumX(3)(3)(4))
+let sumX = (A) => (B) => (C) => A + B + C
+console.log(sumX(3)(3)(4))
 
 
 
-// // Infinite curring function...
-// // sample output1:
-// //  sumInfinite(1)(2)(3)(4)(5)(6)() // 21
-// // sample output2:
-// // sumInfinite(1)(2)(3)(4)(8)(3)(1)() // 22
+// Infinite curring function...
+// sample output1:
+//  sumInfinite(1)(2)(3)(4)(5)(6)() // 21
+// sample output2:
+// sumInfinite(1)(2)(3)(4)(8)(3)(1)() // 22
 
-// function sumInfinite(a) {
-//     return function (b) {
-//         if (b) {
-//             return sumInfinite(a + b);
-//         } else {
-//             return a;
-//         }
-//     }
-// }
-// let infiniteFunAns = sumInfinite(1)(2)(3)(4)(8)(3)(1)()
-// console.log(infiniteFunAns)
-
-
-// // Event loop Practice problems...
+function sumInfinite(a) {
+    return function (b) {
+        if (b) {
+            return sumInfinite(a + b);
+        } else {
+            return a;
+        }
+    }
+}
+let infiniteFunAns = sumInfinite(1)(2)(3)(4)(8)(3)(1)()
+console.log(infiniteFunAns)
 
 
+// Event loop Practice problems...
 
-// console.log('Start'); // first 1. //start --->execution stack
 
-// setTimeout(() => {
-//     console.log('Timeout 1'); // five 5. Timeout 1 ---->callback queue or job queue
-// }, 0);
 
-// Promise.resolve()
-//     .then(() => {
-//         console.log('Promise 1'); // third 3. // Promise 1 ---> Microtask Queue
-//     })
-//     .then(() => {
-//         console.log('Promise 2'); // fourth 4. // Promise 2 ----> Microtask Queue
-//     });
+console.log('Start'); // first 1. //start --->execution stack
 
-// setTimeout(() => {
-//     console.log('Timeout 2'); // six 6. Timeout 2 ---->callback queue or job queue
-// }, 0);
+setTimeout(() => {
+    console.log('Timeout 1'); // five 5. Timeout 1 ---->callback queue or job queue
+}, 0);
 
-// console.log('End'); // seconde 2.  // End --->execution stack
+Promise.resolve()
+    .then(() => {
+        console.log('Promise 1'); // third 3. // Promise 1 ---> Microtask Queue
+    })
+    .then(() => {
+        console.log('Promise 2'); // fourth 4. // Promise 2 ----> Microtask Queue
+    });
+
+setTimeout(() => {
+    console.log('Timeout 2'); // six 6. Timeout 2 ---->callback queue or job queue
+}, 0);
+
+console.log('End'); // seconde 2.  // End --->execution stack
 
 
 
