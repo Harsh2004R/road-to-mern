@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 5s",
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS8lqiCVzsh0yPNjsFm1tOOfFHZ1vEn649GpKFkFvD5h4tebEf3eH_bvhC7Z0vzxDr3TLeweVf5XA5CZrXSbm7Yw8s4Gup51WsrmuwbHA0IMpU3tUacGCe7AF8",
+      "price": "26000"
+    },
+    {
+      "id": 2,
+      "title": "Iphone 14",
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT3V-pb9dOL0aTktn98O_5CYVFyfck9-6b2HTqAKMff73QIX-VpNyBVay8FcntIymYE-zSIDOhbB57ZL4EMjUq6GIg2nmQRsiNEtJSB1fSm",
+      "price": "55000"
+    },
+    {
+      "id": 3,
+      "title": "iPhone 13 pro",
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRqVzAutpwFoSuUFv1vIyP-ggD2AsQtI5_hDkDiCzC1SUvi9icNxapIckvvbPS0V2x0Uq96wJBnNY4ps16r5IPd7MIO1yOwcaycP77NyaXY",
+      "price": "48002"
+    },
+    {
+      "id": 4,
+      "title": "iPhone 16",
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSt9aFLNs6Uivh1KRzB3iZZ379BJLXQq59yEW7dkYZymyeqvlZVfxuYUW7RkwiLQZU9MgPAZR3KH_9xX-_x7wVUZJqXCIJ_cwoXZHwRnHJo7JZIqjx-3SgZEA",
+      "price": "89000"
+    },
+    {
+      "id": 5,
+      "title": "POCO C75 5G",
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTeIhhVxyoa0cA0ecblMjUOONso7oZUAMvdPY5S9C5Oh467UuxYe6Oc79F2v0XoGL91atZGs6xKvWXQ-TvUu7EDzRZLRu9hliHvQs0rJfSbyEEMyOhrqjG8",
+      "price": "13000"
+    },
+    {
+      "id": 6,
+      "title": "POCO C75 5G",
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTeIhhVxyoa0cA0ecblMjUOONso7oZUAMvdPY5S9C5Oh467UuxYe6Oc79F2v0XoGL91atZGs6xKvWXQ-TvUu7EDzRZLRu9hliHvQs0rJfSbyEEMyOhrqjG8",
+      "price": "1300"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ import Timer from "./Unit/Day-5/Timer.jsx"
 import ReffTimer from "./Unit/Day-6/ReffTimer.jsx"
 import TimerUsereff from "./Unit/Day-6/TimerUsereff.jsx"
 import FormsHandeling from "./Unit/Day-6/FormsHandeling.jsx"
-
+import FetchAndDisplay from "./Unit/Day-7/FetchAndDisplay.jsx"
 
 
 
@@ -28,7 +28,8 @@ function App() {
       {/* Day -6 Understanding useRef by bilding timer again but including more features to it along with cleanup function  */}
       {/* <TimerUsereff /> */}
       {/* <FormsHandeling /> */}
-
+      {/* Day -7 This is gonna be revision day I will create a admin panle where we fetch / post and display data */}
+      <FetchAndDisplay />
 
     </>
   )
