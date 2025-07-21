@@ -4,6 +4,13 @@ import Todo from "./Unit/Day-2/Todo.jsx"
 import CricketScoreBoard from "./Unit/Day-3/CricketScoreBoard.jsx"
 import Posts from "./Unit/Day-4/Posts.jsx"
 import Timer from "./Unit/Day-5/Timer.jsx"
+import ReffTimer from "./Unit/Day-6/ReffTimer.jsx"
+import TimerUsereff from "./Unit/Day-6/TimerUsereff.jsx"
+import FormsHandeling from "./Unit/Day-6/FormsHandeling.jsx"
+
+
+
+
 function App() {
 
   return (
@@ -18,6 +25,11 @@ function App() {
       {/* <Posts /> */}
       {/* Day -5 Understanding useEffect by bilding timer and it's cleanup function */}
       {/* <Timer /> */}
+      {/* Day -6 Understanding useRef by bilding timer again but including more features to it along with cleanup function  */}
+      {/* <TimerUsereff /> */}
+      {/* <FormsHandeling /> */}
+
+
     </>
   )
 }
