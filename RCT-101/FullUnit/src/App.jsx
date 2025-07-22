@@ -12,7 +12,7 @@ import FetchAndDisplay from "./Unit/Day-7/FetchAndDisplay.jsx"
 import Main from "./Unit/Day-8/Main.jsx"
 import DayNine from "./Unit/Day-9/DayNine.jsx"
 import D10Routes from "./Unit/Day-10/D10Routes.jsx"
-
+import D11Routes from "./Unit/Day-11/D11Routes.jsx"
 
 function App() {
 
@@ -40,10 +40,13 @@ function App() {
         <DayNine />
       </BrowserRouter> */}
       {/* Day -10 We Will cover React Routing in more effective way */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <D10Routes />
+      </BrowserRouter> */}
+      {/* Day -11 We Will create a beautiful app by using all concepts covered / learned so far*/}
+      <BrowserRouter>
+        <D11Routes />
       </BrowserRouter>
-
 
     </>
   )
