@@ -1,4 +1,5 @@
 import React from "react"
+import { BrowserRouter } from "react-router-dom"
 import Props from "./Unit/Day-1/Props.jsx"
 import Todo from "./Unit/Day-2/Todo.jsx"
 import CricketScoreBoard from "./Unit/Day-3/CricketScoreBoard.jsx"
@@ -9,6 +10,7 @@ import TimerUsereff from "./Unit/Day-6/TimerUsereff.jsx"
 import FormsHandeling from "./Unit/Day-6/FormsHandeling.jsx"
 import FetchAndDisplay from "./Unit/Day-7/FetchAndDisplay.jsx"
 import Main from "./Unit/Day-8/Main.jsx"
+import DayNine from "./Unit/Day-9/DayNine.jsx"
 
 
 function App() {
@@ -31,8 +33,11 @@ function App() {
       {/* Day -7 This is gonna be revision day I will create a admin panle where we fetch / post and display data */}
       {/* <FetchAndDisplay /> */}
       {/* Day -8 I will use Context api to build Auth Tool or may be theme tool */}
-      <Main />
-
+      {/* <Main /> */}
+      {/* Day -9 We will cover Routing and a real world project today */}
+      <BrowserRouter>
+        <DayNine />
+      </BrowserRouter>
     </>
   )
 }
