@@ -11,6 +11,7 @@ import FormsHandeling from "./Unit/Day-6/FormsHandeling.jsx"
 import FetchAndDisplay from "./Unit/Day-7/FetchAndDisplay.jsx"
 import Main from "./Unit/Day-8/Main.jsx"
 import DayNine from "./Unit/Day-9/DayNine.jsx"
+import D10Routes from "./Unit/Day-10/D10Routes.jsx"
 
 
 function App() {
@@ -35,9 +36,15 @@ function App() {
       {/* Day -8 I will use Context api to build Auth Tool or may be theme tool */}
       {/* <Main /> */}
       {/* Day -9 We will cover Routing and a real world project today */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <DayNine />
+      </BrowserRouter> */}
+      {/* Day -10 We Will cover React Routing in more effective way */}
+      <BrowserRouter>
+        <D10Routes />
       </BrowserRouter>
+
+
     </>
   )
 }
