@@ -91,14 +91,64 @@ This unit covers the foundational concepts of JavaScript including:
 ---
 
 
+### ✅ Unit 4 - RCT-101 (React state management Hooks & Chakra UI)
+
+- React 101 Follows following structure to keep track of daily work go through DAY-1 , Day-2 ............ Day-13 folder.
+
+```bash
+fullUnit/
+├── public/
+│   ├── 
+│   └── vite.svg
+├── src/
+│   ├── assets/
+|   └── Unit/
+|        └── Day-1
+|        └── Day-2
+|        └── Day-3
+|        └── Day-4
+|        └── Day-5
+|        └── Day-6
+|        └── Day-7
+|        └── Day-8
+|        └── Day-9
+|        └── Day-10
+|        └── Day-11
+|        └── Day-12
+|        └── Day-13
+│   ├── components/
+│   │   └── Navbar.jsx
+│   ├── pages/
+│   │   └── Home.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+#### Top's covered in RCT-101 are:
+1. `useState`
+2. `useEffect`
+3. `form state handeling using single hook`
+4. `useRef`
+5. `Contect APi`
+6. `useReducer`
+7. `Axios`
+8. `Chakra Ui`
+and more...
+
+
+
+
 
 ## 🛠️ Upcoming Units
 
 Stay tuned for upcoming units as we progress further:
 
-- ✅ Git & GitHub
 - ✅ API Integration
-- ✅ React.js
+- ✅ React.js (advance)
+- ✅ Redux  /  Redux Tool Kit
 - ✅ Node.js + Express
 - ✅ MongoDB
 - ✅ Full MERN Projects
