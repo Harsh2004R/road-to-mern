@@ -13,6 +13,8 @@ import Main from "./Unit/Day-8/Main.jsx"
 import DayNine from "./Unit/Day-9/DayNine.jsx"
 import D10Routes from "./Unit/Day-10/D10Routes.jsx"
 import D11Routes from "./Unit/Day-11/D11Routes.jsx"
+import ReducerTimer from "./Unit/Day-12/ReducerTimer.jsx"
+import Day12Todo from "./Unit/Day-12/Day12Todo.jsx"
 
 function App() {
 
@@ -44,10 +46,12 @@ function App() {
         <D10Routes />
       </BrowserRouter> */}
       {/* Day -11 We Will create a beautiful app by using all concepts covered / learned so far*/}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <D11Routes />
-      </BrowserRouter>
-
+      </BrowserRouter> */}
+      {/* Day -12 We will learn useReducer hook today using some examples */}
+      {/* <ReducerTimer /> */}
+      <Day12Todo />
     </>
   )
 }
