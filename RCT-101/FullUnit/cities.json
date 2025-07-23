@@ -1,0 +1,124 @@
+{
+  "cities": [
+    {
+      "id": "1",
+      "name": "New York",
+      "country": "USA",
+      "population": 8419600
+    },
+    {
+      "id": "2",
+      "name": "Tokyo",
+      "country": "Japan",
+      "population": 13929000
+    },
+    {
+      "id": "3",
+      "name": "Paris",
+      "country": "France",
+      "population": 2141000
+    },
+    {
+      "id": "4",
+      "name": "Mumbai",
+      "country": "India",
+      "population": 12442373
+    },
+    {
+      "id": "5",
+      "name": "Sydney",
+      "country": "Australia",
+      "population": 5312163
+    },
+    {
+      "id": "6",
+      "name": "London",
+      "country": "UK",
+      "population": 8982000
+    },
+    {
+      "id": "7",
+      "name": "Berlin",
+      "country": "Germany",
+      "population": 3769000
+    },
+    {
+      "id": "8",
+      "name": "Toronto",
+      "country": "Canada",
+      "population": 2731571
+    },
+    {
+      "id": "9",
+      "name": "Beijing",
+      "country": "China",
+      "population": 21540000
+    },
+    {
+      "id": "10",
+      "name": "Rio de Janeiro",
+      "country": "Brazil",
+      "population": 6748000
+    },
+    {
+      "id": "11",
+      "name": "Cape Town",
+      "country": "South Africa",
+      "population": 433688
+    },
+    {
+      "id": "12",
+      "name": "Moscow",
+      "country": "Russia",
+      "population": 11920000
+    },
+    {
+      "id": "13",
+      "name": "Seoul",
+      "country": "South Korea",
+      "population": 9776000
+    },
+    {
+      "id": "14",
+      "name": "Dubai",
+      "country": "UAE",
+      "population": 3331400
+    },
+    {
+      "id": "15",
+      "name": "Bangkok",
+      "country": "Thailand",
+      "population": 8281000
+    },
+    {
+      "id": "16",
+      "name": "Singapore",
+      "country": "Singapore",
+      "population": 5638700
+    },
+    {
+      "id": "17",
+      "name": "Los Angeles",
+      "country": "USA",
+      "population": 3980000
+    },
+    {
+      "id": "18",
+      "name": "Buenos Aires",
+      "country": "Argentina",
+      "population": 2890000
+    },
+    {
+      "id": "19",
+      "name": "Cairo",
+      "country": "Egypt",
+      "population": 9900000
+    },
+    {
+      "id": "ead2",
+      "name": "Beta Worse",
+      "country": "Worse",
+      "population": "145879523"
+    }
+  ]
+}
