@@ -1,5 +1,6 @@
 import './App.css'
 import RenderDay2 from './Unit/Day-1/RenderDay2'
+import GenericComponent from './Unit/Day-2/GenericComponent'
 import Counter from "./Unit/previousUnitRecap/Counter"
 import FormWithReducer from "./Unit/previousUnitRecap/FormWithReducer"
 function App() {
@@ -10,7 +11,10 @@ function App() {
       {/* <Counter /> */}
       {/* <FormWithReducer /> */}
       {/* Day - 1 We Will learn & create some Custom Hooks today ... */}
-      <RenderDay2 />
+      {/* <RenderDay2 /> */}
+      {/* Day - 2 We will learn to create own Generic Components ... */}
+      {/* <GenericComponent /> */}
+
     </>
   )
 }
