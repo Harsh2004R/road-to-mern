@@ -1,6 +1,6 @@
 import React from 'react';
-import { store } from "../../Redux/store";
-import { incrementAction, decrementAction } from '../../Redux/actions';
+import { store } from "../../Redux/ReduxD3/store";
+import { incrementAction, decrementAction } from '../../Redux/ReduxD3/actions';
 function D3Counter() {
 
   const { getState, dispatch } = store
