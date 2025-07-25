@@ -1,23 +1,8 @@
 {
   "todos": [
     {
-      "id": 1753423826379,
-      "title": "Learn MERN stack",
-      "status": false
-    },
-    {
-      "id": 1753423832440,
-      "title": "Learn NExt.js",
-      "status": false
-    },
-    {
-      "id": 1753423837483,
-      "title": "Learn Node.js",
-      "status": false
-    },
-    {
-      "id": 1753423866956,
-      "title": "Learn Express.js",
+      "id": 1753428423122,
+      "title": "Learn MERN",
       "status": false
     }
   ]
