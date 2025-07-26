@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "server-crud": "json-server --watch crud.json --port 3002",
     "server": "json-server --watch day4.json --port 3001",
     "dev": "vite",
     "build": "vite build",
@@ -20,6 +21,7 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.7.0",
     "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
     "server": "^1.0.42"
   },
   "devDependencies": {

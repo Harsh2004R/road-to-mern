@@ -11,6 +11,7 @@ import PSCCounter from './Unit/PSC-S2/PSCCounter'
 import PSCTheme from './Unit/PSC-S2/PSCTheme'
 import { Provider } from 'react-redux'
 import { store } from './Redux/Redux-Psc-S2/store'
+import CrudMain from './Unit/CRUD/CrudMain'
 function App() {
 
   return (
@@ -28,13 +29,14 @@ function App() {
       {/* <D4Main /> */}
       {/* Day - 5 We Will learn configuration of redux with local storage or if we have multiple reducers ans states... */}
       {/* <D5Main /> */}
-      {/* We Will Learn Redux Thunk Todau... */}
+      {/* Day - 6 We Will Learn Redux Thunk Todau... */}
       {/* <D6Main /> */}
-      {/* PSC -> Problem Solving Class Sprint - 2 .... */}
-      <Provider store={store}>
+      {/* PSC -> Day - 7  Problem Solving Class Sprint - 2 .... */}
+      {/* <Provider store={store}>
         <PSCTheme />
-      </Provider >
-
+      </Provider > */}
+      {/* Its Day - 8 We Will Learn Full CURD */}
+      <CrudMain />
 
     </>
   )
