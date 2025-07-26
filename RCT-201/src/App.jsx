@@ -6,6 +6,11 @@ import Counter from "./Unit/previousUnitRecap/Counter"
 import FormWithReducer from "./Unit/previousUnitRecap/FormWithReducer"
 import D4Main from "./Unit/Day-4/D4Main"
 import D5Main from './Unit/Day-5/D5Main'
+import D6Main from './Unit/Day-6/D6Main'
+import PSCCounter from './Unit/PSC-S2/PSCCounter'
+import PSCTheme from './Unit/PSC-S2/PSCTheme'
+import { Provider } from 'react-redux'
+import { store } from './Redux/Redux-Psc-S2/store'
 function App() {
 
   return (
@@ -23,8 +28,12 @@ function App() {
       {/* <D4Main /> */}
       {/* Day - 5 We Will learn configuration of redux with local storage or if we have multiple reducers ans states... */}
       {/* <D5Main /> */}
-
-
+      {/* We Will Learn Redux Thunk Todau... */}
+      {/* <D6Main /> */}
+      {/* PSC -> Problem Solving Class Sprint - 2 .... */}
+      <Provider store={store}>
+        <PSCTheme />
+      </Provider >
 
 
     </>
