@@ -8,6 +8,7 @@ function ProductList() {
     const dispatch = useDispatch();
     const [searchParams] = useSearchParams()
     const location = useLocation();
+    let querry = location.search;
     const { products, isError, isLoading } = useSelector((store) => {
         return {
             products: store.ProductReducer.product,
@@ -15,15 +16,15 @@ function ProductList() {
             isError: store.ProductReducer.isError,
         };
     }, shallowEqual);
-    let filterData = {
-        params: {
-            brand: searchParams.getAll("brand")
-        }
-    }
-    console.log(filterData.params)
+    // let filterData = {
+    //     params: {
+    //         brand: searchParams.getAll("brand")
+    //     }
+    // }
+
     useEffect(() => {
-        dispatch(getProducts(filterData));
-    }, [location.search]);
+        dispatch(getProducts(querry));
+    }, [querry]);
     const containerStyle = {
         maxWidth: '1200px',
         margin: '0 auto',

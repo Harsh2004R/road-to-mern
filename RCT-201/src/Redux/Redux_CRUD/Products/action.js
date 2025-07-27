@@ -24,11 +24,12 @@ export const postProducts = (formData) => (dispatch) => {
             console.log(err)
         })
 }
-export const getProducts = (filterData) => (dispatch) => {
+export const getProducts = (querry) => (dispatch) => {
     dispatch(requestAction())
-    axios.get("http://localhost:3002/products", filterData)
+    axios.get(`http://localhost:3002/products${querry}`,)
         .then((res) => {
             dispatch(getSuccessAction(res.data));
+            console.log(res.data)
         }).catch((err) => {
             dispatch(failureAction(err));
             console.log(err)
