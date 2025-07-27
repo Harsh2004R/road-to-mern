@@ -1,7 +1,8 @@
 import React from 'react'
-import { Navigate } from "react-router-dom"
+import { Navigate, useLocation } from "react-router-dom"
 import { shallowEqual, useSelector } from "react-redux"
 function CrudPrivateRoutes({ children }) {
+    const location = useLocation()
     const { isAuth } = useSelector((store) => {
         return {
             isAuth: store.AuthReducer.isAuth
@@ -9,7 +10,7 @@ function CrudPrivateRoutes({ children }) {
     }, shallowEqual)
     console.log("isAuth from private route", isAuth)
     if (isAuth === false) {
-        return <Navigate to="/login" />
+        return <Navigate state={location.pathname} to="/login" />
     }
     return children
 }

@@ -5,6 +5,7 @@ import CrudHome from "./CrudHome"
 import CrudNav from './CrudNav'
 import Login from "./CrudLogin"
 import CrudPrivateRoutes from './CrudPrivateRoutes'
+import Settings from "./Settings"
 function CrudRoutes() {
     return (
         <>
@@ -15,6 +16,9 @@ function CrudRoutes() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/admin" element={<CrudPrivateRoutes>
                     <Admin />
+                </CrudPrivateRoutes>} />
+                <Route path="/settings" element={<CrudPrivateRoutes>
+                    <Settings />
                 </CrudPrivateRoutes>} />
             </Routes>
         </>

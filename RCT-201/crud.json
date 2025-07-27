@@ -7,6 +7,110 @@
       "price": "35199",
       "brand": "Apple",
       "category": "Mobiles"
+    },
+    {
+      "id": "da8b",
+      "name": "Apple Watch Series 6",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTHOndRpPuoBCuzIJfYJuPqnkKZfLrxiqTnG47tS6P0v5y4XPbLpxA0BnnR4fjYVTJD9ISneULn_-edaqN9ir_U6GxI0Jz9MesP6pzrcInn5v-Ord5-FpE0",
+      "price": "9999",
+      "brand": "Apple",
+      "category": "Mobiles"
+    },
+    {
+      "id": "3751",
+      "name": "Apple iPhone 11 Pro Max",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSuGhR3ZUyDH1eKJ9yVS2rg1dH4xDUrKSWDUI1hOSflIw2XnQP6YMflVbGOQ8dnGzGeoXa4MclujFwIBuVWZEfv_Q4jf2huHg",
+      "price": "24999",
+      "brand": "Apple",
+      "category": "Mobiles"
+    },
+    {
+      "id": "aceb",
+      "name": "Samsung Galaxy Watch8 Classic",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSG-IQXM4chNwQ61aMLNyn4od439pLWSQ7InSr1IPm7ZRcsGWwBG_F6s-wJtWEYxrnkDxON62SxkiwkCJ2y-y7kOYrfKpxCaDRngqDVZQk",
+      "price": "45000",
+      "brand": "Samsung",
+      "category": "Electronics"
+    },
+    {
+      "id": "713e",
+      "name": "Samsung Galaxy Fit3 AMOLED Display",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT5xWvGD8Pw3cR8et736xMNOwDS6DgnDNaPi6Z65VmP4UUHk4J6yKArFNozybjs4IclY4Eb2jrRht_zIZ7MXJkt_7CyB8u9_t2n8VjnhXrHT1lNgCEbTjq7IRE",
+      "price": "4999",
+      "brand": "Samsung",
+      "category": "Electronics"
+    },
+    {
+      "id": "4c0e",
+      "name": "Samsung Galaxy 7 Watch",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRbGA57mw75e5c_O5dAPrN62AGSe9VhzCYCz3Qyy6D1ll8xgK1u1GAcawPRti3e6WHn8ZzgYPdpQuoiJeyvefWj0uUZPvogKuUlrNMypijuxbnzwsAYmG3_",
+      "price": "32999",
+      "brand": "Samsung",
+      "category": "Electronics"
+    },
+    {
+      "id": "34b8",
+      "name": "Sony Alpha a7 III Mirrorless Camera",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTUzYA-KX1O2aM3oQGsk65MiUIezaO1X2-aDRQ08dnlHDkcFpppQmlKz2cZ4JbrrlnPInlATqq1j6ghSL1K7Y2Xy6GFKWuHGa75EzWykvA",
+      "price": "129999",
+      "brand": "Sony",
+      "category": "Electronics"
+    },
+    {
+      "id": "f423",
+      "name": "Sony ZV-1F Camera",
+      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSOAAc35cg_qjlMbWqezdLqNrZ8DDBqsG4R6RUdMrlA85YwR_HEU8muYzVPhm3tAhjyONUAmzEZS4ewUSHAUWGQYB99dFKQNp8D7onaqJ-bIO8FbqRch0Vgul0",
+      "price": "38499",
+      "brand": "Sony",
+      "category": "Electronics"
+    },
+    {
+      "id": "b7c9",
+      "name": "ARRIS G20 8 Axis 22L UAV Agriculture Spraying Drone",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTGdwzEgDicWfN1msNAZQAFse4r9t0g_9qfzcne9Dcdoy5-4VHaSJoz1cuLe8ELDUrZs0Av5g9dr40Sl2E6xeEQ69UWqhAh3EgRb-Ox5381nTyiXjP_guMVWg",
+      "price": "99999",
+      "brand": "DJI",
+      "category": "Drones"
+    },
+    {
+      "id": "c908",
+      "name": "DJI Neo Fly More Combo",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRNJ3M569YrRwZHf91EYamVGtwtD_MlRv4smTeZCYWwPJRaZIp2A3GZAbYdC_gn6jQdsqXavc_gV7Z1slKSQSNRx1Dkx06JOE1qQPtRiyfwuq9EVfPJzORQ",
+      "price": "34999",
+      "brand": "DJI",
+      "category": "Drones"
+    },
+    {
+      "id": "9bdc",
+      "name": "Kreo Arctik Laptop Cooler",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSw3-9AYIDT_DnnUVuJPAMNWkw07XebhftoJ1KxunnYMFmyh4iZTQfXxwH3zohXWYa7iqOVdsu5_lAP2_dOIqqlih84MI-e4wcKL9aYP9m9jErrV-k0nUGj2w",
+      "price": "1899",
+      "brand": "Other",
+      "category": "Accessories"
+    },
+    {
+      "id": "18bf",
+      "name": "Henture Alive Set of 5 Keyboard And Mouse Combo",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR2J-wKuWcn0zejZh6hhQ1gPWRf0byJVDKfp_kw1nmtsrW7bvtJilk8LQISkpKBs_NQwhtJ236Rsb13AedH6LsRHsDz5GxxgMJZtrQtSDE",
+      "price": "1599",
+      "brand": "Other",
+      "category": "Accessories"
+    },
+    {
+      "id": "b623",
+      "name": "Portronics Mport 11C 11-in-1 USB Type C Hub",
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQy8CwEENnz-roN1lhSzZwwaFRsJbPCyKVc9V3mZ2CIjkBNyq0eDsaM3rfNuYet0y48-ngR11bDpZlsEb_eA86NNLbgLSV85_kugezq0JWjsDl-G8X2JvrbAw",
+      "price": "499",
+      "brand": "Other",
+      "category": "Accessories"
+    },
+    {
+      "id": "7e33",
+      "name": "Zebronics USB Type A to C Converter",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQsLjgB3PQa9uOAq6ZhU4S75BfigsA3pHac-eFJLWKxUi-2QWWOTlu6wykM2xpjFzz60zRr8l1yJpPUfpdmncGwkAbxOyljf22DOIuDVhJRD6i6q7MXAFB1r6Q",
+      "price": "149",
+      "brand": "Other",
+      "category": "Others"
     }
   ]
 }

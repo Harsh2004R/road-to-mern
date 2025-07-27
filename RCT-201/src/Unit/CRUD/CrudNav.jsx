@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom"
-
+import { useSelector } from "react-redux"
 function CrudNav() {
+
+    const isAuth = useSelector((store) => store.AuthReducer.isAuth)
+
+
+
     const navStyle = {
         backgroundColor: '#333',
         color: 'white',
@@ -31,8 +36,11 @@ function CrudNav() {
             <div style={logoStyle}>CRUD App</div>
             <div style={navLinksStyle}>
                 <Link to="/" style={linkStyle}>Home</Link>
+                <Link style={linkStyle}>{isAuth ? "Authenticated" : "Not Authenticated"}</Link>
                 <Link to="/login" style={linkStyle}>Login</Link>
                 <Link to="/admin" style={linkStyle}>Products</Link>
+                <Link to="settings" style={linkStyle} >Settings</Link>
+
             </div>
         </div>
     );

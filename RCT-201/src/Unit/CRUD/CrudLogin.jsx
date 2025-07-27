@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import axios from "axios"
 import { shallowEqual, useDispatch, useSelector } from "react-redux"
 import { loginUser } from "../../Redux/Redux_CRUD/auth/action"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 function CrudLogin() {
+    const location = useLocation()
     const { token, isAuth } = useSelector((store) => {
         return {
             token: store.AuthReducer.token,
@@ -24,7 +25,9 @@ function CrudLogin() {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(loginUser(form))
+        dispatch(loginUser(form)).then((res) => {
+            naviaget(location.state)
+        })
 
     }
 

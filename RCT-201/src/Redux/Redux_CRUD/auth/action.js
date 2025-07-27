@@ -10,17 +10,16 @@ export const isTokenAction = (payload) => {
 
 // Thunk function
 export const loginUser = (formData) => async (dispatch) => {
-    try {
-        const res = await axios.post("https://reqres.in/api/login", formData, {
-            headers: {
-                "x-api-key": "reqres-free-v1"
-            }
-        });
+    return await axios.post("https://reqres.in/api/login", formData, {
+        headers: {
+            "x-api-key": "reqres-free-v1"
+        }
+    }).then((res) => {
         dispatch(isAuthAction());
         dispatch(isTokenAction(res.data.token));
-    } catch (err) {
-        console.error("Login failed", err);
-    }
+    }).catch((err) => {
+        return new Error;
+    })
 };
 
 

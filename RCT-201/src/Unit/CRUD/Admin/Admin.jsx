@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { shallowEqual, useDispatch, useSelector } from "react-redux"
-import { requestAction, failureAction, postSuccessAction } from "../../../Redux/Redux_CRUD/Products/action"
-import axios from "axios"
+import { postProducts } from "../../../Redux/Redux_CRUD/Products/action"
+
 const Admin = () => {
     const { isLoading, isError, product } = useSelector((store) => {
         return {
@@ -27,14 +27,14 @@ const Admin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Submitted Data:', formData);
-        dispatch(requestAction())
-        axios.post("http://localhost:3002/products",formData).then((res) => {
-            console.log(res.data);
-            dispatch(postSuccessAction(res.data))
-        }).catch((err) => {
-            dispatch(failureAction(err));
-            console.log(err)
+        // console.log('Submitted Data:', formData);
+        dispatch(postProducts(formData))
+        setFormData({
+            name: '',
+            image: '',
+            price: '',
+            brand: '',
+            category: '',
         })
     };
 
