@@ -1,8 +1,10 @@
 import { AUTH, TOKEN } from "../Products/actionTypes"
 
+
+const lsAuthToken = localStorage.getItem("auth-token")
 const productState = {
-    isAuth: false,
-    token: ""
+    isAuth: !!lsAuthToken,
+    token: lsAuthToken || "",
 }
 
 export const reducer = (state = productState, { type, payload }) => {

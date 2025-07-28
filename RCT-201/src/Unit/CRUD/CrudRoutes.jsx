@@ -17,7 +17,7 @@ function CrudRoutes() {
                 <Route path="/admin" element={<CrudPrivateRoutes>
                     <Admin />
                 </CrudPrivateRoutes>} />
-                <Route path="/settings" element={<CrudPrivateRoutes>
+                <Route path="/settings/:id" element={<CrudPrivateRoutes>
                     <Settings />
                 </CrudPrivateRoutes>} />
             </Routes>

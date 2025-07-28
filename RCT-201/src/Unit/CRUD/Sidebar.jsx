@@ -35,14 +35,21 @@ const radioContainerStyle = {
 
 function Sidebar() {
     const [searchParams, setSearchParams] = useSearchParams();
-    const initState = searchParams.getAll("brand")
-    const [brand, setBrand] = useState(initState || []);
+    const initBrand = searchParams.getAll("brand")
+    const initCat = searchParams.getAll("category")
+    const initOrder = searchParams.getAll("order")
+    const [brand, setBrand] = useState(initBrand || []);
+    const [category, setCategory] = useState(initCat || []);
+    const [order, setOrder] = useState(initOrder || "");
     useEffect(() => {
         let param = {
-            brand
+            brand,
+            category
         }
+        order && (param.order = order);
         setSearchParams(param)
-    }, [brand])
+    }, [brand, category, order])
+
 
 
     const handleBrand = (e) => {
@@ -55,8 +62,20 @@ function Sidebar() {
         }
         setBrand(brandArray)
     }
-    // console.log(brand)
-
+    const handleCategory = (e) => {
+        const { value } = e.target;
+        let catArray = [...category];
+        if (catArray.includes(value)) {
+            catArray = catArray.filter((el) => el !== value)
+        } else {
+            catArray.push(value);
+        }
+        setCategory(catArray)
+    }
+    const handleOrder = (e) => {
+        const { value } = e.target;
+        setOrder(value);
+    }
 
 
     return (
@@ -95,6 +114,8 @@ function Sidebar() {
                             name="category"
                             value={cat}
                             style={{ marginRight: '8px' }}
+                            onChange={handleCategory}
+                            checked={category.includes(cat)}
                         />
                         {cat}
                     </label>
@@ -102,7 +123,7 @@ function Sidebar() {
             </div>
 
             {/* Price Sort Radio */}
-            <div style={radioContainerStyle}>
+            <div style={radioContainerStyle} onChange={handleOrder}>
                 <label style={labelStyle}>Sort by Price:</label>
                 <label style={checkboxLabelStyle}>
                     <input type="radio" name="sort" value="asc" style={{ marginRight: '8px' }} />

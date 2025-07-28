@@ -1,6 +1,9 @@
 import React from 'react';
-
+import { deleteProduct, getProducts } from "../../Redux/Redux_CRUD/Products/action"
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 function ProductCard({ id, brand, image, category, name, price }) {
+    const dispatch = useDispatch();
     const cardStyle = {
         border: '1px solid #ddd',
         borderRadius: '12px',
@@ -16,13 +19,13 @@ function ProductCard({ id, brand, image, category, name, price }) {
 
     const imageStyle = {
         width: '100%',
-        height: 'auto',           
-        maxHeight: '300px',      
-        objectFit: 'contain',    
+        height: 'auto',
+        maxHeight: '300px',
+        objectFit: 'contain',
         borderRadius: '8px',
         marginBottom: '12px',
         display: 'block',
-        marginInline: 'auto'  
+        marginInline: 'auto'
     };
 
     const nameStyle = {
@@ -45,16 +48,27 @@ function ProductCard({ id, brand, image, category, name, price }) {
         marginBottom: '4px'
     };
 
+    const handleDelete = () => {
+        dispatch(deleteProduct(id)).then((res) => {
+            location.reload();
+        })
+    }
     return (
-        <div style={cardStyle}>
+
+        <div style={cardStyle} >
             <img src={image} alt={name} style={imageStyle} />
             <div style={nameStyle}>{name}</div>
             <div style={priceStyle}>₹{price}</div>
             <div style={brandCategoryStyle}>Brand: {brand}</div>
             <div style={brandCategoryStyle}>Category: {category}</div>
             <br />
-            <button>edit</button>
-        </div>
+            <button onClick={handleDelete}>
+                Delete
+            </button>
+            <button >
+                <Link to={`/settings/${id}`} >Edit</Link>
+            </button>
+        </div >
     );
 }
 

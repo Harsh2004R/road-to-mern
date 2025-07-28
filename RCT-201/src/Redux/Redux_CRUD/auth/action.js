@@ -1,11 +1,15 @@
-import { AUTH, TOKEN } from "../Products/actionTypes"
+import { AUTH, TOKEN, FAILURE } from "../Products/actionTypes"
 import axios from "axios"
 export const isAuthAction = () => {
     return { type: AUTH }
 }
 
 export const isTokenAction = (payload) => {
+    localStorage.setItem("auth-token", payload)
     return { type: TOKEN, payload }
+}
+export const isFailAction = () => {
+    return { type: FAILURE, payload }
 }
 
 // Thunk function
@@ -18,6 +22,7 @@ export const loginUser = (formData) => async (dispatch) => {
         dispatch(isAuthAction());
         dispatch(isTokenAction(res.data.token));
     }).catch((err) => {
+        dispatch(isFailAction(err));
         return new Error;
     })
 };

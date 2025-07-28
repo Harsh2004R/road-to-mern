@@ -39,7 +39,7 @@ function CrudNav() {
                 <Link style={linkStyle}>{isAuth ? "Authenticated" : "Not Authenticated"}</Link>
                 <Link to="/login" style={linkStyle}>Login</Link>
                 <Link to="/admin" style={linkStyle}>Products</Link>
-                <Link to="settings" style={linkStyle} >Settings</Link>
+                <Link to="/settings/:id" style={linkStyle} >Settings</Link>
 
             </div>
         </div>

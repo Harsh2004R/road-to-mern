@@ -55,7 +55,7 @@ function ProductList() {
 
             <div style={gridStyle}>
                 {products.length > 0 && products.map((el) => (
-                    <ProductCard key={el.id} {...el} />
+                    <ProductCard key={Math.random()} {...el} />
                 ))}
             </div>
         </div>
