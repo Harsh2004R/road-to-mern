@@ -12,6 +12,7 @@ import PSCTheme from './Unit/PSC-S2/PSCTheme'
 import { Provider } from 'react-redux'
 import { store } from './Redux/Redux-Psc-S2/store'
 import CrudMain from './Unit/CRUD/CrudMain'
+import D8Todo from './Unit/Day-8/Components/D8Todo'
 function App() {
 
   return (
@@ -36,8 +37,10 @@ function App() {
         <PSCTheme />
       </Provider > */}
       {/* Its Day - 8 We Will Learn Full CURD */}
-      <CrudMain />
-
+      {/* <CrudMain /> */}
+      {/* Day-8 We will learn some react optimization using memo and useCallback... */}
+      
+        <D8Todo />
     </>
   )
 }
