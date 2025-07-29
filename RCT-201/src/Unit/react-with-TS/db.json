@@ -1,0 +1,24 @@
+{
+  "Todos": [
+    {
+      "id": "fdf",
+      "title": "Learn MERN",
+      "status": false
+    },
+    {
+      "id": "6376",
+      "title": "Hey Harsh",
+      "status": false
+    },
+    {
+      "id": "26ab",
+      "title": "Learn Next.js",
+      "status": false
+    },
+    {
+      "id": "6201",
+      "title": "Learn Chai",
+      "status": false
+    }
+  ]
+}
