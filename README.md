@@ -127,17 +127,22 @@ fullUnit/
 └── README.md
 ```
 
-#### Top's covered in RCT-101 are:
-1. `useState`
-2. `useEffect`
-3. `form state handeling using single hook`
-4. `useRef`
-5. `Contect APi`
-6. `useReducer`
-7. `Axios`
-8. `Chakra Ui`
-and more...
 
+
+### ✅ Unit 5 - RCT-201 (Advance React , TypeScript, Redux (global state management) , new Hooks & Testing)
+
+- React 201 Follows following structure to keep track of daily work go through previousUnitRecap > DAY-1 , Day-2 ............ Day-6 > PSC-S2 > CRUD > TypeScript > Testing folder.
+
+
+#### Top's covered in RCT-201 are:
+1. `Recap of useStae , useEffect , useRef, useReducer hooks`
+2. `Redux`
+3. `React - Redux / Redux config with React`
+4. `Redux - Middleware (thunk)`
+5. `Crud 1, Crud 2, Crud 3`
+6. `TypeScript`
+7. `Testing`
+and more...
 
 
 
@@ -147,10 +152,11 @@ and more...
 Stay tuned for upcoming units as we progress further:
 
 - ✅ API Integration
-- ✅ React.js (advance)
-- ✅ Redux  /  Redux Tool Kit
 - ✅ Node.js + Express
+- ✅ Express - Middlewares
+- ✅ Authentication (jwt,bcrypt,hashing)
 - ✅ MongoDB
+- ✅ MongoDB Aggrigations
 - ✅ Full MERN Projects
 
 ---
